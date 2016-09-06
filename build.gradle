@@ -1,0 +1,57 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext{
+    compileSdkVersion = 23
+    buildToolsVersion = '23.0.3'
+    supportLibraryVersion = '23.2.1'
+    minSdkVersion = 19
+    targetSdkVersion = 22
+    butterknife = '8.2.1'
+}
+
+ext.deps = [
+        support_v4: "com.android.support:support-v4:$rootProject.supportLibraryVersion",
+        cardview: "com.android.support:cardview-v7:$rootProject.supportLibraryVersion",
+        appcompat_v7:"com.android.support:appcompat-v7:$rootProject.supportLibraryVersion",
+        design: "com.android.support:design:$rootProject.supportLibraryVersion",
+
+        butterknife:"com.jakewharton:butterknife:$rootProject.butterknife",
+        butterknifeCompiler:"com.jakewharton:butterknife-compiler:$rootProject.butterknife",
+        butterknifePlugin:"com.jakewharton:butterknife-gradle-plugin:$rootProject.butterknife",
+
+        rxjava: 'io.reactivex:rxjava:1.1.6',
+        rxandroid: 'io.reactivex:rxandroid:1.2.1',
+
+        circleimageview: 'de.hdodenhof:circleimageview:2.1.0',
+        gridlayout: "com.android.support:gridlayout-v7:$rootProject.supportLibraryVersion",
+
+        logger: 'com.orhanobut:logger:1.15',
+
+        recyclerviewDivider: 'com.yqritc:recyclerview-flexibledivider:1.4.0',
+
+        leakcanary: 'com.squareup.leakcanary:leakcanary-android:1.3',
+
+        gson: 'com.google.code.gson:gson:2.6.2'
+]

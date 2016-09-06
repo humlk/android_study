@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/content_interval"
+              android:paddingLeft="@dimen/content_interval"
+              android:paddingRight="@dimen/content_interval"
+              android:paddingTop="@dimen/content_interval">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/BaseStyle.txt.body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
